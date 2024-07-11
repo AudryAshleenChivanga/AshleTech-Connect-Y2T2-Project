@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AshleTech Connect SRHR</title>
+    <link rel="stylesheet" href="/project/frontend/CSS/signup.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign Up for AshleTech Connect SRHR</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="input-group checkbox">
+                <input type="checkbox" id="agree" name="agree">
+                <label for="agree">I agree to the Terms and Conditions</label>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="signup-link">
+            <p>Already have an account? <a href="/project/frontend/login.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="/project/frontend/JS/signup.js"></script>
+</body>
+</html>

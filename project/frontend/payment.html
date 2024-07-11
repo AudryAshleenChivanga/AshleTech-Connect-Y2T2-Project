@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - AshleTech Connect SRHR</title>
+    <link rel="stylesheet" href="/project/static/CSS/payment.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/project/static/Assets/ashletech-connect-high-resolution-logo-white-transparent.png" alt="AshleTech Connect SRHR Logo">
+        </div>
+    
+    </header>
+    <main>
+        <div class="payment-container">
+            <h2>Payment Information</h2>
+            <form action="/project/process-payment" method="post">
+                <div class="form-group">
+                    <label for="payment-method">Payment Method:</label>
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <input type="radio" id="credit-card" name="payment-method" value="credit-card" required>
+                            <label for="credit-card"><img src="/project/static/creditcard.jpeg" alt="Credit Card"> Credit Card</label>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" id="paypal" name="payment-method" value="paypal" required>
+                            <label for="paypal"><img src="/project/static/Assets/paypal.jpeg" alt="PayPal"> PayPal</label>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer" required>
+                            <label for="bank-transfer"><img src="/project/static/banktransfer.jpeg" alt="Bank Transfer"> Bank Transfer</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Submit Payment</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/project/static/Assets/ashletech-connect-high-resolution-logo-white-transparent.png" alt="AshleTech Connect SRHR Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/project/frontend/index.html/#home">Home</a></li>
+                    <li><a href="/project/frontend/index.html/#about">About</a></li>
+                    <li><a href="/project/frontend/index.html/#services">Services</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#specialists">Specialists</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 AshleTech Connect SRHR. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

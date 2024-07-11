@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+.articles-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.articles-list li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.articles-list h2 {
+    color: #333;
+}
+
+.articles-list p {
+    color: #666;
+}
+
+.read-more {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.login-prompt p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-prompt a {
+    color: #d63031;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}

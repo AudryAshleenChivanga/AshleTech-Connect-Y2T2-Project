@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #eeeeee, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.signup-container {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50; /* Green, focus indication */
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.login-link p {
+    margin-top: 20px;
+    color: #666;
+}
+
+.login-link a {
+    color: #d63031; /* Red */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    color: #e17055; /* Lighter red */
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+.checkbox label {
+    margin: 0;
+    font-size: 0.9em;
+}
