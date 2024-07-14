@@ -22,18 +22,31 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Items will be dynamically added here -->
+                {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.product.name }}</td>
+                    <td>${{ item.product.price }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>${{ item.total_price }}</td>
+                    <td>
+                        <a href="{{ url_for('main.remove_from_cart', item_id=item.id) }}">Remove</a>
+                    </td>
+                </tr>
+                {% endfor %}
             </tbody>
         </table>
         <div class="total-container">
-            <span>Total: $<span id="total-price">0.00</span></span>
+            <span>Total: $<span id="total-price">{{ total_price }}</span></span>
         </div>
 
         <div class="checkout-container">
-            <a href="/project/frontend/payment.html">
+            <a href="{{ url_for('main.products') }}">
                 <button>Continue Shopping</button>
-
+            </a>
+            <a href="/project/frontend/payment.html">
+                <button>Proceed to Payment</button>
+            </a>
+        </div>
     </main>
-    
 </body>
 </html>
