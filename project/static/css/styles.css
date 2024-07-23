@@ -1,0 +1,554 @@
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark grey text */
+}
+
+/* Header styling */
+header {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px; /* Adjust the height as needed */
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; /* Yellow for hover effect */
+}
+
+/* Home section styling */
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark grey text */
+}
+
+/* Header styling */
+header {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px; /* Adjust the height as needed */
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; /* Yellow for hover effect */
+}
+
+/* Home section styling */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.welcome-message {
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.welcome-message h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Green headings */
+}
+
+.welcome-message p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #250e0e; /* Black text */
+}
+
+.cta-button {
+    background-color: #ff6f61; /* Coral color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4c3b;
+    transform: translateY(-5px);
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About section styling */
+#about {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #4CAF50; /* green background */
+}
+
+.card {
+    text-align: center;
+    max-width: 300px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #4CAF50; /* Green headings */
+}
+
+.card p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+
+/* Services section styling */
+#services {
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+#services h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #4CAF50; /* Green headings */
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon img {
+    height: 60px; /* Adjust the height as needed */
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #4CAF50; /* Green headings */
+}
+
+.service-card p {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #666666; /* Dark grey text */
+}
+
+
+/* Specialists section styling */
+#specialists {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+#specialists h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #4CAF50; /* Green headings */
+}
+
+#specialists p {
+    font-size: 1.2em;
+}
+/* Catalog section styling */
+#catalog {
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+#catalog h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #4CAF50; /* Green headings */
+}
+
+.catalog-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.catalog-item {
+    background-color: #f8f9fa; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.catalog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.catalog-item h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #4CAF50; /* Green headings */
+}
+
+.catalog-item p {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #666666; /* Dark grey text */
+}
+
+.buy-button {
+    background-color: #ff6f61; /* Coral color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px;
+}
+
+.buy-button:hover {
+    background-color: #ff4c3b;
+    transform: translateY(-5px);
+}
+/* Specialists section styling */
+#specialists {
+    padding: 50px 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+#specialists h2 {
+    font-size: 2.5em;
+    color: #4CAF50; /* Green headings */
+    margin-bottom: 30px;
+}
+
+.specialists-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.specialist-card {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.specialist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.specialist-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.specialist-card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #4CAF50; /* Green headings */
+}
+
+.specialist-card p {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #666666; /* Dark grey text */
+}
+
+.contact-button {
+    background-color: #ff6f61; /* Coral color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px;
+}
+
+.contact-button:hover {
+    background-color: #ff4c3b;
+    transform: translateY(-5px);
+}
+
+/* Specialists section styling */
+#specialists {
+    padding: 50px 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+#specialists h2 {
+    font-size: 2.5em;
+    color: #4CAF50; /* Green headings */
+    margin-bottom: 30px;
+}
+
+.specialists-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.specialist-card {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.specialist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.specialist-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.specialist-card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #4CAF50; /* Green headings */
+}
+
+.specialist-card p {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #666666; /* Dark grey text */
+}
+
+.bio {
+    font-size: 0.9em;
+    color: #555555; /* Slightly darker grey for bio text */
+    margin-top: 10px;
+}
+
+.specialists-cta {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #333333; /* Dark grey text */
+}
+
+.specialists-cta .cta-button {
+    display: inline-block;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.specialists-cta .cta-button:hover {
+    background-color: #388E3C;
+    transform: translateY(-5px);
+}
+/* Footer styling */
+footer {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    margin: 0 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffeb3b; /* Yellow for hover effect */
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
