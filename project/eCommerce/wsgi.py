@@ -1,5 +1,5 @@
 """
-WSGI config for eCommerce project.
+WSGI config for AshleTech Connect project for eCommerce Sexual Reproductive Health project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
