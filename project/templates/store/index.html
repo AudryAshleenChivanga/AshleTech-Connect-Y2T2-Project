@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AshleTech Connect SRHR</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/images/ashletech-connect-high-resolution-logo-white-transparent.png" alt="AshleTech Connect SRHR Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#specialists">Specialists</a></li>
+                <li><a href="{% url 'store' %}">Visit Store</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <div class="home-content">
+            <div class="welcome-message">
+                <h1>Welcome to AshleTech Connect SRHR</h1>
+                <p>Your one-stop solution for accessing sexual reproductive health information and products safely online.</p>
+            </div>
+            <div class="home-image">
+                <img src="/static/images/youngusers.jpg" alt="Welcome Image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="card">
+            <img src="/static/images/mission.jpeg" alt="About 1">
+            <h3>Our Mission</h3>
+            <p>We aim to provide comprehensive sexual reproductive health information to young people.</p>
+        </div>
+        <div class="card">
+            <img src="/static/images/vision.jpeg" alt="About 2">
+            <h3>Our Vision</h3>
+            <p>We envision a world where young people have easy access to vital health information and products.</p>
+        </div>
+        <div class="card">
+            <img src="/static/images/SexualreproductivveHealth.jpeg" alt="About 3">
+            <h3>Our Values</h3>
+            <p>We are committed to confidentiality, reliability, and accessibility.</p>
+        </div>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/static/images/informationicon.png" alt="Information Icon">
+                </div>
+                <h3>Reliable Information</h3>
+                <p>Access reliable and comprehensive information on sexual reproductive health to make informed decisions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/static/images/productsicon.jpeg" alt="Products Icon">
+                </div>
+                <h3>Health Products</h3>
+                <p>Purchase sexual reproductive health products safely and discreetly through our online catalog.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/static/images/helpicon.jpeg" alt="Help Icon">
+                </div>
+                <h3>Specialist Help</h3>
+                <p>Connect with specialists for further help and guidance whenever you need it.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="articles">
+        <h2>Latest Articles</h2>
+        <div class="articles-container">
+            <div class="article-item">
+                <h3><a href="https://www.who.int/reproductivehealth/topics/sexual_health/en/" target="_blank">Sexual and Reproductive Health and Rights</a></h3>
+                <p>Explore the basics of sexual reproductive health and its importance in our lives.</p>
+                <a href="https://www.who.int/reproductivehealth/topics/sexual_health/en/" target="_blank">
+                    <button class="read-button">Read More</button>
+                </a>
+            </div>
+            <div class="article-item">
+                <h3><a href="https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception" target="_blank">Family Planning/Contraception</a></h3>
+                <p>Learn about various contraceptive methods and how they work.</p>
+                <a href="https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception" target="_blank">
+                    <button class="read-button">Read More</button>
+                </a>
+            </div>
+            <div class="article-item">
+                <h3><a href="https://www.cdc.gov/sexualhealth/index.htm" target="_blank">Sexual Health</a></h3>
+                <p>Tips and advice on how to maintain good sexual health.</p>
+                <a href="https://www.cdc.gov/sexualhealth/index.htm" target="_blank">
+                    <button class="read-button">Read More</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="specialists">
+        <h2>Meet Our Specialists</h2>
+        <div class="specialists-container">
+            <div class="specialist-card">
+                <img src="/static/images/doctor1.jpeg" alt="Specialist 1">
+                <h3>Dr.Vincent</h3>
+                <p>Sexual Health Expert</p>
+                <p class="bio">Dr. Vincent has over 15 years of experience in sexual health, providing reliable information and compassionate care to his patients.</p>
+            </div>
+            <div class="specialist-card">
+                <img src="/static/images/doctor2.jpeg" alt="Specialist 2">
+                <h3>Dr. Winnie</h3>
+                <p>Reproductive Health Specialist</p>
+                <p class="bio">Dr. Winnie specializes in reproductive health, offering expert advice and support to help individuals make informed decisions.</p>
+            </div>
+            <div class="specialist-card">
+                <img src="/static/images/Dr3.jpeg" alt="Specialist 3">
+                <h3>Dr. Emily</h3>
+                <p>HIV/AIDS Counselor</p>
+                <p class="bio">Dr. Emily is a dedicated HIV/AIDS counselor, committed to providing personalized care and support to those in need.</p>
+            </div>
+        </div>
+        <div class="specialists-cta">
+            <p>Need help? Our specialists are here for you 24/7.</p>
+            <a href="/get-help" class="cta-button">Get Help Now</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/static/images/ashletech-connect-high-resolution-logo-white-transparent.png" alt="AshleTech Connect SRHR Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#specialists">Specialists</a></li>
+                    <li><a href="{% url 'store' %}">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 AshleTech Connect SRHR. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
