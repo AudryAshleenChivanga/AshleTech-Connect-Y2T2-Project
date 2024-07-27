@@ -5,6 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AshleTech Connect SRHR</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        /* Articles section styling */
+        #articles {
+            padding: 50px 20px;
+            background-color: #ffffff; /* White background */
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+        }
+
+        #articles h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #4CAF50; /* Green headings */
+        }
+
+        .articles-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .article-item {
+            background-color: #f8f9fa; /* Light grey background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-item h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #4CAF50; /* Green headings */
+        }
+
+        .article-item p {
+            font-size: 1em;
+            margin-top: 10px;
+            color: #666666; /* Dark grey text */
+        }
+
+        .read-button {
+            background-color: #ff6f61; /* Coral color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 15px;
+        }
+
+        .read-button:hover {
+            background-color: #ff4c3b;
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -52,6 +121,7 @@
             <p>We are committed to confidentiality, reliability, and accessibility.</p>
         </div>
     </section>
+    
     <section id="services">
         <h2>Our Services</h2>
         <div class="services-container">
@@ -62,19 +132,20 @@
                 <h3>Reliable Information</h3>
                 <p>Access reliable and comprehensive information on sexual reproductive health to make informed decisions.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="/static/images/productsicon.jpeg" alt="Products Icon">
-                </div>
-                <h3>Health Products</h3>
-                <p>Purchase sexual reproductive health products safely and discreetly through our online catalog.</p>
-            </div>
+            
             <div class="service-card">
                 <div class="service-icon">
                     <img src="/static/images/helpicon.jpeg" alt="Help Icon">
                 </div>
                 <h3>Specialist Help</h3>
                 <p>Connect with specialists for further help and guidance whenever you need it.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="/project/static/images/producicon.png" alt="Producticon">
+                </div>
+                <h3>Health Products</h3>
+                <p>Get quality sexual health products here, approved by medical doctors and specialists.</p>
             </div>
         </div>
     </section>
@@ -146,7 +217,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#articles">Articles</a></li>
                     <li><a href="#specialists">Specialists</a></li>
-                    <li><a href="{% url 'store' %}">Login</a></li>
+                    <li><a href="{% url 'store' %}">Store</a></li>
                 </ul>
             </div>
             <div class="footer-copyright">

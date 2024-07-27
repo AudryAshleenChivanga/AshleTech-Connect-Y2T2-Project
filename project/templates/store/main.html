@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="en">
     <head>
-           <title>AshleTech Connect  | </title>
-
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-            <link rel="shortcut icon" type="images" href="{% static 'images/icon.ico' %}">
-            <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-          
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Glory:wght@500&display=swap" rel="stylesheet">
-
-
-            <script type="text/javascript">
-
-            var user = '{{request.user}}'
+        <title>AshleTech Connect</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.ico' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Glory:wght@500&display=swap" rel="stylesheet">
+        <style>
+            .navbar {
+                background-color: #4CAF50;
+            }
+        </style>
+        <script type="text/javascript">
+            var user = '{{ request.user }}';
 
             function getToken(name) {
                 var cookieValue = null;
@@ -24,7 +24,6 @@
                     var cookies = document.cookie.split(';');
                     for (var i = 0; i < cookies.length; i++) {
                         var cookie = cookies[i].trim();
-                        // Does this cookie string begin with the name we want?
                         if (cookie.substring(0, name.length + 1) === (name + '=')) {
                             cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                             break;
@@ -33,96 +32,82 @@
                 }
                 return cookieValue;
             }
-            var csrftoken = getToken('csrftoken')
+            var csrftoken = getToken('csrftoken');
 
             function getCookie(name) {
-                // Split cookie string and get all individual name=value pairs in an array
                 var cookieArr = document.cookie.split(";");
-
-                // Loop through the array elements
-                for(var i = 0; i < cookieArr.length; i++) {
+                for (var i = 0; i < cookieArr.length; i++) {
                     var cookiePair = cookieArr[i].split("=");
-
-                    /* Removing whitespace at the beginning of the cookie name
-                    and compare it with the given string */
-                    if(name == cookiePair[0].trim()) {
-                        // Decode the cookie value and return
+                    if (name == cookiePair[0].trim()) {
                         return decodeURIComponent(cookiePair[1]);
                     }
                 }
-
-                // Return null if not found
                 return null;
             }
-		    var cart = JSON.parse(getCookie('cart'))
+            var cart = JSON.parse(getCookie('cart'));
 
             if (cart == undefined){
-                cart = {}
-                console.log('Cart Created!', cart)
-                document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+                cart = {};
+                console.log('Cart Created!', cart);
+                document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/";
             }
-            console.log('Cart:', cart)
+            console.log('Cart:', cart);
+        </script>
+    </head>
+    <body style="font-family: 'Glory', sans-serif;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="{% url 'store' %}">
+                <img width="40px" height="40px" src="{% static 'images/ashletech-connect-high-resolution-logo-white-transparent.png' %}" alt="AshleTech Connect">
+                AshleTech Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </script>
-     </head>
-     <body style="font-family: 'Glory', sans-serif;">
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="{% url 'store' %}"><img width="40px" height="40px" src="{% static 'images/ashletech-connect-high-resolution-logo-white-transparent' %}">AshleTech Connect</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'store' %}">Store <span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-            <div class="form-inline my-2 my-lg-0">
-                <a href="#"class="btn btn-primary">Login</a>
-                <a href="{% url 'cart' %}">
-                    <img  id="cart-icon" src="{% static 'images/cart.png' %}">
-                </a>
-                <p id="cart-total">{{ cartItems }}</p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'store' %}">Store <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <a href="{% url 'index' %}" class="btn btn-primary">Back to main</a>
+                    <a href="{% url 'cart' %}">
+                        <img id="cart-icon" src="{% static 'images/cart.png' %}" alt="Cart">
+                    </a>
+                    <p id="cart-total">{{ cartItems }}</p>
+                </div>
             </div>
-
-          </div>
         </nav>
 
-         <div class="container">
-                <br>
-                {% block content %}
-
-
-                 {% endblock content %}
-                <br>
-         </div>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light"><span style="font-family: 'Glory', sans-serif; color: black; margin-top: 2%; margin-left: 540px;"> <div class="footer-container">
-        <div class="footer-logo">
-            <img src="{% static 'images/ashletech-connect-high-resolution-logo-white-transparent' %}" alt="AshleTech Connect SRHR Logo">
+        <div class="container mt-4">
+            {% block content %}
+            {% endblock content %}
         </div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#specialists">Specialists</a></li>
-                <li><a href="{% url 'store' %}">Store</a></li>
-            </ul>
-        </div>
-        <div class="footer-copyright">
-            <p>&copy; 2024 AshleTech Connect SRHR. All Rights Reserved.</p>
-        </div>
-    </div> </span></nav>
 
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <footer class="footer bg-light py-4 mt-5">
+            <div class="container text-center">
+                <div class="footer-logo mb-3">
+                    <img src="{% static 'images/ashletech-connect-high-resolution-logo-white-transparent.png' %}" alt="AshleTech Connect SRHR Logo">
+                </div>
+                <div class="footer-links mb-3">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#home">Home</a></li>
+                        <li class="list-inline-item"><a href="#about">About</a></li>
+                        <li class="list-inline-item"><a href="#services">Services</a></li>
+                        <li class="list-inline-item"><a href="#specialists">Specialists</a></li>
+                        <li class="list-inline-item"><a href="{% url 'store' %}">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 AshleTech Connect SRHR. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
 
-	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-      <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
-     </body>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+    </body>
 </html>
