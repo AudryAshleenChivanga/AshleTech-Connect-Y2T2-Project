@@ -1,4 +1,4 @@
-ls
+
 ![alt text](static/images/ashletech-connect-high-resolution-logo-white-transparent.png)
 
 This is a fully functional Sexual Reproductive Health  web app  named AshleTech Connect SRHR. The web app is working towards solving SRHR problems faced by young people by allowing them to get information as articles and access to an on store for SRH products.
