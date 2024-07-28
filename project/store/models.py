@@ -26,7 +26,6 @@ class Product(models.Model):
             url = ''
         return url
 
-
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
     date_order = models.DateTimeField(auto_now_add=True)
@@ -44,7 +43,6 @@ class Order(models.Model):
             if i.product.digital == False:
                 shipping = True
         return shipping
-
 
     @property
     def get_cart_total(self):
@@ -69,7 +67,6 @@ class OrderItem(models.Model):
         total = self.product.price * self.quantity
         return total
 
-
 class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
@@ -81,3 +78,21 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return self.address
+
+# New models
+class Article(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    author = models.CharField(max_length=100)
+    published_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+class Specialist(models.Model):
+    name = models.CharField(max_length=100)
+    field = models.CharField(max_length=100)
+    contact_info = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
