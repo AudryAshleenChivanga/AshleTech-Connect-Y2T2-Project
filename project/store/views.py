@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 import json
 import datetime
@@ -20,7 +20,6 @@ def store(request):
     context = {'products': products, 'cartItems': cartItems}
     return render(request, 'store/store.html', context)
 
-
 def cart(request):
     data = cartData(request)
 
@@ -31,7 +30,6 @@ def cart(request):
     context = {'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/cart.html', context)
 
-
 def checkout(request):
     data = cartData(request)
 
@@ -41,7 +39,6 @@ def checkout(request):
 
     context = {'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'store/checkout.html', context)
-
 
 def updateItem(request):
     data = json.loads(request.body)
@@ -75,7 +72,6 @@ def updateItem(request):
 
     return JsonResponse('Item was added', safe=False)
 
-
 def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)
@@ -107,3 +103,23 @@ def processOrder(request):
         )
 
     return JsonResponse('Payment submitted..', safe=False)
+
+def article_list(request):
+    articles = Article.objects.all()
+    context = {'articles': articles}
+    return render(request, 'store/article_list.html', context)
+
+def article_detail(request, article_id):
+    article = get_object_or_404(Article, id=article_id)
+    context = {'article': article}
+    return render(request, 'store/article_detail.html', context)
+
+def specialist_list(request):
+    specialists = Specialist.objects.all()
+    context = {'specialists': specialists}
+    return render(request, 'store/specialist_list.html', context)
+
+def specialist_detail(request, specialist_id):
+    specialist = get_object_or_404(Specialist, id=specialist_id)
+    context = {'specialist': specialist}
+    return render(request, 'store/specialist_detail.html', context)

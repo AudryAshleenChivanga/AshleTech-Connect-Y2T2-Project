@@ -79,7 +79,6 @@ class ShippingAddress(models.Model):
     def __str__(self):
         return self.address
 
-# New models
 class Article(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
@@ -93,6 +92,7 @@ class Specialist(models.Model):
     name = models.CharField(max_length=100)
     field = models.CharField(max_length=100)
     contact_info = models.CharField(max_length=200)
+    picture = models.ImageField(upload_to='specialists/', null=True, blank=True)
 
     def __str__(self):
         return self.name

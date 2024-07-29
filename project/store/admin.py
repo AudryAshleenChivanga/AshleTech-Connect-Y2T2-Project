@@ -13,11 +13,11 @@ class ArticleAdmin(admin.ModelAdmin):
     list_filter = ('published_date',)
 
 class SpecialistAdmin(admin.ModelAdmin):
-    list_display = ('name', 'field', 'contact_info')
+    list_display = ('name', 'field', 'contact_info', 'picture')
     search_fields = ('name', 'field')
     list_filter = ('field',)
 
-# Register your models here
+# Registering my models here
 admin.site.register(Customer)
 admin.site.register(Product)
 admin.site.register(Order)

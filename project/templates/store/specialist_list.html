@@ -1,0 +1,10 @@
+{% extends 'store/main.html' %}
+
+{% block content %}
+  <h2>Specialists</h2>
+  <ul>
+    {% for specialist in specialists %}
+      <li><a href="{% url 'specialist_detail' specialist.id %}">{{ specialist.name }} - {{ specialist.field }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -16,9 +16,10 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#specialists">Specialists</a></li>
+                <li><a href="{% url 'article_list' %}">Articles</a></li>
+                <li><a href="{% url 'specialist_list' %}">Specialists</a></li>
                 <li><a href="{% url 'store' %}">Visit Store</a></li>
+                <li><a href="{% url 'cart' %}">Cart</a></li>
                 <li><a href="{% url 'admin:index' %}">Admin</a></li>
             </ul>
         </nav>
@@ -81,52 +82,7 @@
             </div>
         </div>
     </section>
-    
-    <section id="articles">
-        <h2>Latest Articles</h2>
-        <div class="articles-container">
-            <div class="article-item">
-                <h3><a href="https://www.who.int/reproductivehealth/topics/sexual_health/en/" target="_blank">Sexual and Reproductive Health and Rights</a></h3>
-                <p>Explore the basics of sexual reproductive health and its importance in our lives.</p>
-                <a href="https://www.who.int/reproductivehealth/topics/sexual_health/en/" target="_blank">
-                    <button class="read-button">Read More</button>
-                </a>
-            </div>
-            <div class="article-item">
-                <h3><a href="https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception" target="_blank">Family Planning/Contraception</a></h3>
-                <p>Learn about various contraceptive methods and how they work.</p>
-                <a href="https://www.who.int/news-room/fact-sheets/detail/family-planning-contraception" target="_blank">
-                    <button class="read-button">Read More</button>
-                </a>
-            </div>
-            <div class="article-item">
-                <h3><a href="https://www.cdc.gov/sexualhealth/index.htm" target="_blank">Sexual Health</a></h3>
-                <p>Tips and advice on how to maintain good sexual health.</p>
-                <a href="https://www.cdc.gov/sexualhealth/index.htm" target="_blank">
-                    <button class="read-button">Read More</button>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="specialists">
-        <h2>Meet Our Specialists</h2>
-        <div class="specialists-container">
-            <div class="specialist-card">
-                <img src="/static/images/doctor1.jpeg" alt="Specialist 1">
-                <h3>Dr.Vincent</h3>
-                <p>Sexual Health Expert</p>
-                <p class="bio">Dr. Vincent has over 15 years of experience in sexual health, providing reliable information and compassionate care to his patients.</p>
-            </div>
-            <div class="specialist-card">
-                <img src="/static/images/doctor2.jpeg" alt="Specialist 2">
-                <h3>Dr. Winnie</h3>
-                <p>Reproductive Health Specialist</p>
-                <p class="bio">Dr. Winnie specializes in reproductive health, offering expert advice and support to help individuals make informed decisions.</p>
-            </div>
-        </div>
-    </section>
-    
+
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
@@ -134,12 +90,10 @@
             </div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#articles">Articles</a></li>
-                    <li><a href="#specialists">Specialists</a></li>
-                    <li><a href="{% url 'store' %}">Store</a></li>
+                    <li><a href="{% url 'article_list' %}">Articles</a></li>
+                        <li><a href="{% url 'specialist_list' %}">Specialists</a></li>
+                        <li><a href="{% url 'cart' %}">Cart</a></li>
+                        <li><a href="{% url 'store' %}">Visit Store</a></li>
                 </ul>
             </div>
             <div class="footer-copyright">
