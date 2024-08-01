@@ -5,13 +5,13 @@ This is a fully functional Sexual Reproductive Health  web app  named AshleTech 
 
 ## Features
 - User can access the landing page with information about AshleTech Connect SRHR .
-- The articles will be on read more button on the landing page.
 - User can access store on a different page.
 - User and guest checkout capabilities.
 - Setting up the templates and data structure in the first two modules.
 - Adding user checkout flow with payment integration.
 - After complete basic checkout .
 - The admin can change the catalog by adding or deleting items and can also manage customers and shipping details.
+- Admin can change the articles, update them or delete them , and can also manage specialists and their contact details.
 
 ## Technologies
 1. Django (Backend)
